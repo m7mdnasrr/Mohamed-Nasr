@@ -1,108 +1,4 @@
-<section id="certifications" class="experience">
-            <div class="container">
-                <h2 class="section-title fade-in">🎓 Certifications & Professional Training</h2>
-                <div class="cert-timeline fade-in">
-                    <div class="cert-item">
-                        <div class="cert-year scan-line">
-                            <div>2025</div>
-                            <div style="font-size: 0.9rem; margin-top: 0.5rem;">In Progress</div>
-                        </div>
-                        <div class="cert-content neon-glow">
-                            <h3 class="cert-title">eJPT (eLearnSecurity Junior Penetration Tester)</h3>
-                            <p class="cert-org">eLearnSecurity</p>
-                            <p>Advanced penetration testing certification focusing on real-world attack scenarios and ethical hacking methodologies.</p>
-                            <div class="cert-skills">
-                                <span class="cert-skill">Penetration Testing</span>
-                                <span class="cert-skill">Vulnerability Assessment</span>
-                                <span class="cert-skill">Ethical Hacking</span>
-                                <span class="cert-skill">Network Exploitation</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cert-item">
-                        <div class="cert-year scan-line">
-                            <div>2025</div>
-                            <div style="font-size: 0.9rem; margin-top: 0.5rem;">In Progress</div>
-                        </div>
-                        <div class="cert-content">
-                            <h3 class="cert-title">Security+ (CompTIA Security+)</h3>
-                            <p class="cert-org">CompTIA</p>
-                            <p>Industry-standard cybersecurity certification covering security fundamentals, risk management, and incident response.</p>
-                            <div class="cert-skills">
-                                <span class="cert-skill">Risk Management</span>
-                                <span class="cert-skill">Incident Response</span>
-                                <span class="cert-skill">Security Architecture</span>
-                                <span class="cert-skill">Compliance</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cert-item">
-                        <div class="cert-year scan-line">
-                            <div>2025</div>
-                            <div style="font-size: 0.9rem; margin-top: 0.5rem;">Completed</div>
-                        </div>
-                        <div class="cert-content">
-                            <h3 class="cert-title">Cybersecurity Operations</h3>
-                            <p class="cert-org">National Telecommunication Institute</p>
-                            <p>Comprehensive training in cybersecurity operations, threat hunting, and security incident management.</p>
-                            <div class="cert-skills">
-                                <span class="cert-skill">SOC Operations</span>
-                                <span class="cert-skill">Threat Hunting</span>
-                                <span class="cert-skill">SIEM</span>
-                                <span class="cert-skill">Incident Management</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cert-item">
-                        <div class="cert-year scan-line">
-                            <div>2025</div>
-                            <div style="font-size: 0.9rem; margin-top: 0.5rem;">Completed</div>
-                        </div>
-                        <div class="cert-content">
-                            <h3 class="cert-title">Cloud Computing Training</h3>
-                            <p class="cert-org">Information Technology Institute (ITI)</p>
-                            <p>Advanced cloud infrastructure training covering deployment, security, and management of cloud services.</p>
-                            <div class="cert-skills">
-                                <span class="cert-skill">Cloud Architecture</span>
-                                <span class="cert-skill">DevOps</span>
-                                <span class="cert-skill">Container Security</span>
-                                <span class="cert-skill">Infrastructure as Code</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cert-item">
-                        <div class="cert-year scan-line">
-                            <div>2024</div>
-                            <div style="font-size: 0.9rem; margin-top: 0.5rem;">Certified</div>
-                        </div>
-                        <div class="cert-content neon-glow">
-                            <h3 class="cert-title">CCNA (Cisco Certified Network Associate)</h3>
-                            <p class="cert-org">National Telecommunication Institute</p>
-                            <p>Industry-recognized networking certification covering routing, switching, and network security fundamentals.</p>
-                            <div class="cert-skills">
-                                <span class="cert-skill">Routing & Switching</span>
-                                <span class="cert-skill">Network Security</span>
-                                <span class="cert-skill">IP Services</span>
-                                <span class="cert-skill">Network Automation</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cert-item">
-                        <div class="cert-year scan-line">
-                            <div>2024</div>
-                            <div style="font-size: 0.9rem; margin-top: 0.5rem;">Completed</div>
-                        </div>
-                        <div class="cert-content">
-                            <h3 class="cert-title">Advanced C++ Programming</h3>
-                            <p class="cert-org">Beta Academy</p>
-                            <p>Advanced programming concepts, object-oriented design, and system-level programming with C++.</p>
-                            <div class="cert-skills">
-                                <span class="cert-<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -116,359 +12,27 @@
         }
 
         :root {
-            --primary-color: #00ff88;
-            --secondary-color: #00cc6a;
-            --accent-color: #ff6b35;
-            --cyber-blue: #00d4ff;
-            --cyber-purple: #a855f7;
-            --bg-primary: #0a0a0a;
-            --bg-secondary: #111111;
-            --bg-card: #1a1a1a;
-            --text-primary: #ffffff;
-            --text-secondary: #b0b0b0;
-            --border-color: #333333;
-            --shadow: 0 4px 6px -1px rgba(0, 255, 136, 0.2);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 255, 136, 0.3);
-            --gradient: linear-gradient(135deg, var(--primary-color), var(--cyber-blue));
-            --cyber-gradient: linear-gradient(45deg, #00ff88, #00d4ff, #a855f7, #ff6b35);
-        }
-
-        [data-theme="light"] {
             --primary-color: #3b82f6;
             --secondary-color: #1e40af;
             --accent-color: #06b6d4;
-            --cyber-blue: #0ea5e9;
-            --cyber-purple: #8b5cf6;
             --bg-primary: #ffffff;
             --bg-secondary: #f8fafc;
-            --bg-card: #ffffff;
             --text-primary: #1e293b;
             --text-secondary: #64748b;
             --border-color: #e2e8f0;
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             --gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            --cyber-gradient: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #f59e0b);
         }
 
-        /* Cybersecurity Effects */
-        .matrix-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.1;
-            pointer-events: none;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-family="monospace" font-size="8" fill="%2300ff88">01001101</text><text y="20" x="20" font-family="monospace" font-size="6" fill="%2300d4ff">11010010</text><text y="80" x="40" font-family="monospace" font-size="7" fill="%23a855f7">10110101</text></svg>');
-            animation: matrixFlow 10s linear infinite;
-        }
-
-        @keyframes matrixFlow {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
-        }
-
-        .cyber-border {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cyber-border::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 2px;
-            background: var(--cyber-gradient);
-            animation: scanLine 3s linear infinite;
-        }
-
-        @keyframes scanLine {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .glitch {
-            animation: glitch 2s infinite;
-        }
-
-        @keyframes glitch {
-            0%, 100% { transform: translateX(0); }
-            10% { transform: translateX(-2px); }
-            20% { transform: translateX(2px); }
-            30% { transform: translateX(-1px); }
-            40% { transform: translateX(1px); }
-            50% { transform: translateX(0); }
-        }
-
-        .neon-glow {
-            box-shadow: 
-                0 0 5px var(--primary-color),
-                0 0 10px var(--primary-color),
-                0 0 15px var(--primary-color),
-                0 0 20px var(--primary-color);
-        }
-
-        /* Professional Contact Card */
-        .contact-card {
-            background: var(--bg-card);
-            border-radius: 20px;
-            padding: 3rem;
-            text-align: center;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--border-color);
-            position: relative;
-            overflow: hidden;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .contact-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: var(--cyber-gradient);
-        }
-
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 0 auto 2rem;
-            background: var(--gradient);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
-            border: 4px solid var(--primary-color);
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .profile-photo:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
-        }
-
-        .contact-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .contact-card .title {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .contact-detail {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            padding: 1rem;
-            background: var(--bg-secondary);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: var(--text-primary);
-        }
-
-        .contact-detail:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: translateX(5px);
-        }
-
-        /* Certifications Section */
-        .cert-timeline {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .cert-item {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-            align-items: center;
-        }
-
-        .cert-year {
-            background: var(--gradient);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 15px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cert-year::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            animation: shimmer 2s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .cert-content {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .cert-content:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary-color);
-        }
-
-        .cert-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-        }
-
-        .cert-org {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-            font-style: italic;
-        }
-
-        .cert-skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .cert-skill {
-            background: var(--primary-color);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .cert-status {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-left: 1rem;
-        }
-
-        /* Enhanced Project Cards */
-        .engineering-project {
-            border-left: 4px solid var(--accent-color);
-        }
-
-        .cybersecurity-project {
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .project-year {
-            background: var(--accent-color);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        /* Cyber Security themed animations */
-        .scan-line {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .scan-line::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.1), transparent);
-            animation: scan 3s linear infinite;
-        }
-
-        @keyframes scan {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .terminal-text {
-            font-family: 'Courier New', monospace;
-            color: var(--primary-color);
-            background: rgba(0, 0, 0, 0.8);
-            padding: 1rem;
-            border-radius: 5px;
-            border-left: 3px solid var(--primary-color);
-            margin: 1rem 0;
-        }
-
-        .binary-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.03;
-            pointer-events: none;
-            z-index: -1;
-            background-image: repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 2px,
-                var(--primary-color) 2px,
-                var(--primary-color) 4px
-            );
-            animation: binaryFlow 20s linear infinite;
-        }
-
-        @keyframes binaryFlow {
-            0% { transform: translateY(-50px); }
-            100% { transform: translateY(50px); }
+        [data-theme="dark"] {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border-color: #334155;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
         }
 
         body {
@@ -479,25 +43,6 @@
             transition: all 0.3s ease;
         }
 
-        .binary-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.03;
-            pointer-events: none;
-            z-index: -1;
-            background-image: repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 2px,
-                var(--primary-color) 2px,
-                var(--primary-color) 4px
-            );
-            animation: binaryFlow 20s linear infinite;
-        }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -506,15 +51,13 @@
 
         /* Header */
         header {
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 255, 136, 0.1);
+            background: var(--bg-primary);
+            box-shadow: var(--shadow);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
         }
 
         nav {
@@ -702,9 +245,9 @@
 
         .about-content {
             display: grid;
-            grid-template-columns: 400px 1fr;
+            grid-template-columns: 1fr 2fr;
             gap: 4rem;
-            align-items: start;
+            align-items: center;
         }
 
         .about-image {
@@ -1149,7 +692,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1177,47 +720,33 @@
             <div class="container">
                 <h2 class="section-title fade-in">About Me</h2>
                 <div class="about-content fade-in">
-                    <div class="contact-card cyber-border">
-                        <div class="profile-photo floating">
-                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23333'/><circle cx='35' cy='40' r='8' fill='%23fff'/><circle cx='65' cy='40' r='8' fill='%23fff'/><path d='M30 65 Q50 75 70 65' stroke='%23fff' stroke-width='3' fill='none'/></svg>" alt="Profile" style="width: 100%; height: 100%; border-radius: 50%;">
-                        </div>
-                        <h3>Mohamed Nasr</h3>
-                        <p class="title">Senior Electronics & Communication Engineering Student</p>
-                        <div class="contact-details">
-                            <a href="tel:+201022558806" class="contact-detail">
-                                <span style="font-size: 1.2rem;">📞</span>
-                                <span>+201022558806</span>
-                            </a>
-                            <a href="mailto:mohamednasreldin122@gmail.com" class="contact-detail">
-                                <span style="font-size: 1.2rem;">✉️</span>
-                                <span>mohamednasreldin122@gmail.com</span>
-                            </a>
-                            <a href="#" class="contact-detail">
-                                <span style="font-size: 1.2rem;">🌐</span>
-                                <span>mohamed-nasr-pixels-egypt-org</span>
-                            </a>
-                            <a href="#" class="contact-detail">
-                                <span style="font-size: 1.2rem;">💼</span>
-                                <span>m7mdnasrr</span>
-                            </a>
-                        </div>
+                    <div class="about-image floating">
+                        👨‍💻
                     </div>
                     <div class="about-text">
-                        <div class="terminal-text">
-                            <span style="color: var(--primary-color);">mohamed@security:~$</span> whoami
-                        </div>
                         <p>I am a passionate Electronics and Communication Engineering student at Helwan University, currently in my senior year. My journey combines technical excellence with leadership, as I serve as Head of Academic Instructors and Projects Committee at Pixels Egypt Organization.</p>
                         
-                        <p>As an Information Security Enthusiast, I continuously expand my knowledge through specialized training programs at the National Telecommunication Institute and Beta Academy. My expertise spans from low-level hardware design to advanced cybersecurity operations.</p>
+                        <p>As an Information Security Enthusiast, I continuously expand my knowledge through specialized training programs at the National Telecommunication Institute and Beta Academy. My goal is to bridge the gap between hardware and cybersecurity, creating innovative solutions for tomorrow's digital challenges.</p>
                         
                         <p>I believe in the power of knowledge sharing and actively participate in student activities to enhance both technical skills and soft skills while building meaningful connections with peers in the field.</p>
                         
-                        <div class="terminal-text">
-                            <span style="color: var(--primary-color);">mohamed@security:~$</span> cat specializations.txt<br>
-                            <span style="color: var(--cyber-blue);">→ Cybersecurity Operations</span><br>
-                            <span style="color: var(--cyber-purple);">→ Network Security & CCNA</span><br>
-                            <span style="color: var(--accent-color);">→ Electronics & Communication</span><br>
-                            <span style="color: var(--primary-color);">→ Leadership & Education</span>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <span>📞</span>
+                                <span>+201022558806</span>
+                            </div>
+                            <div class="contact-item">
+                                <span>✉️</span>
+                                <span>mohamednasreldin122@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <span>🌐</span>
+                                <span>mohamed-nasr-pixels-egypt-org</span>
+                            </div>
+                            <div class="contact-item">
+                                <span>💼</span>
+                                <span>m7mdnasrr</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1930,4 +1459,23 @@
             }
         });
     </script>
-                            
+</body>
+</html>="project-link">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">🤖</div>
+                        <div class="project-content">
+                            <h3 class="project-title">IoT Security System</h3>
+                            <p class="project-description">Smart home security system combining embedded systems with cloud connectivity and real-time monitoring capabilities.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">Arduino</span>
+                                <span class="tech-tag">IoT</span>
+                                <span class="tech-tag">Cloud</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">View Code</a>
+                                <a href="#" class
