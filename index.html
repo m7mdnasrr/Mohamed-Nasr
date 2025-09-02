@@ -231,6 +231,31 @@
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
             animation: shimmer 2s infinite;
         }
+		
+		.cert-badge > div {
+    width: 250px;          /* standard width */
+    height: 250px;         /* standard height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--bg-primary);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+/* Fix cert badges visibility in dark mode */
+[data-theme="dark"] .cert-badge > div {
+    background: #2d3748 !important;   /* medium-dark gray for contrast */
+    color: #f9fafb;                   /* light text */
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.6); /* stronger glow */
+}
+
+
 
         @keyframes shimmer {
             0% { left: -100%; }
@@ -597,8 +622,12 @@
 
         /* About Section */
         .about {
-            background: var(--bg-secondary);
-        }
+    background: var(--bg-secondary);
+    padding: 100px 0;  /* more breathing room */
+    position: relative;
+    z-index: 1;        /* keep it above floating stuff */
+}
+
 
         .about-content {
             display: grid;
@@ -1048,9 +1077,9 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+				<li><a href="#certifications">Certifications</a></li>
                 <li><a href="#skills">Skills</a></li>
 				<li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
@@ -1156,29 +1185,7 @@
             <h2 class="section-title fade-in">Certifications & Training</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;" class="fade-in">
 
-                <!-- eJPT -->
-                <div class="cert-badge">
-                    <div style="text-align: center; padding: 2rem; background: var(--bg-primary); border-radius: 15px; box-shadow: var(--shadow); transition: transform 0.3s ease;">
-                        <div style="margin-bottom: 1rem;">
-                            <img src="images/certs/ejpt.png" alt="eJPT Badge" style="width: 100px; height: auto;">
-                        </div>
-                        <h3>eJPT</h3>
-                        <p style="color: var(--text-secondary);">In Progress - 2025</p>
-                    </div>
-                </div>
-
-                <!-- Security+ -->
-                <div class="cert-badge">
-                    <div style="text-align: center; padding: 2rem; background: var(--bg-primary); border-radius: 15px; box-shadow: var(--shadow); transition: transform 0.3s ease;">
-                        <div style="margin-bottom: 1rem;">
-                            <img src="images/certs/securityplus.png" alt="CompTIA Security+ Badge" style="width: 100px; height: auto;">
-                        </div>
-                        <h3>Security+</h3>
-                        <p style="color: var(--text-secondary);">Completed - 2025</p>
-                    </div>
-                </div>
-
-                <!-- CCNA -->
+                 <!-- CCNA -->
                 <div class="cert-badge">
                     <div style="text-align: center; padding: 2rem; background: var(--bg-primary); border-radius: 15px; box-shadow: var(--shadow); transition: transform 0.3s ease;">
                         <div style="margin-bottom: 1rem;">
@@ -1199,6 +1206,41 @@
                         <p style="color: var(--text-secondary);">Completed - 2025</p>
                     </div>
                 </div>
+				
+				<!-- eJPT -->
+                <div class="cert-badge">
+                    <div style="text-align: center; padding: 2rem; background: var(--bg-primary); border-radius: 15px; box-shadow: var(--shadow); transition: transform 0.3s ease;">
+                        <div style="margin-bottom: 1rem;">
+                            <img src="images/certs/ejpt.png" alt="eJPT Badge" style="width: 100px; height: auto;">
+                        </div>
+                        <h3>eJPT</h3>
+                        <p style="color: var(--text-secondary);">In Progress - 2025</p>
+                    </div>
+                </div>
+
+                <!-- Security+ -->
+                <div class="cert-badge">
+                    <div style="text-align: center; padding: 2rem; background: var(--bg-primary); border-radius: 15px; box-shadow: var(--shadow); transition: transform 0.3s ease;">
+                        <div style="margin-bottom: 1rem;">
+                            <img src="images/certs/securityplus.png" alt="CompTIA Security+ Badge" style="width: 100px; height: auto;">
+                        </div>
+                        <h3>Security+</h3>
+                        <p style="color: var(--text-secondary);">Completed - 2025</p>
+                    </div>
+                </div>
+				
+				<!-- AWS Cloud -->
+                <div class="cert-badge">
+                    <div style="text-align: center; padding: 2rem; background: var(--bg-primary); border-radius: 15px; box-shadow: var(--shadow); transition: transform 0.3s ease;">
+                        <div style="margin-bottom: 1rem;">
+                            <img src="images/certs/aws.png" alt="AWS Cloud Badge" style="width: 100px; height: auto;">
+                        </div>
+                        <h3>Security+</h3>
+                        <p style="color: var(--text-secondary);">Completed - 2025</p>
+                    </div>
+                </div>
+
+               
 
             </div>
         </div>
