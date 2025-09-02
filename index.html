@@ -12,8 +12,8 @@
         }
 		
 		:root {
-		/* ===== LIGHT THEME ===== */
-    --primary-color: #3b82f6; /* Same base blue */
+    /* ===== LIGHT THEME ===== */
+    --primary-color: #3b82f6;
     --secondary-color: #2563eb;
     --accent-color: #06b6d4;
     --cyber-blue: #0ea5e9;
@@ -28,30 +28,26 @@
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     --cyber-gradient: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #f59e0b);
-    
 }
 
-[data-theme="light"] {
-/* ===== DARK THEME ===== */
-    --primary-color: #3b82f6; /* Bright blue for consistency */
-    --secondary-color: #2563eb; /* Deeper blue */
-    --accent-color: #06b6d4; /* Cyan highlight */
+[data-theme="dark"] {
+    /* ===== DARK THEME ===== */
+    --primary-color: #3b82f6;
+    --secondary-color: #2563eb;
+    --accent-color: #06b6d4;
     --cyber-blue: #0ea5e9;
     --cyber-purple: #8b5cf6;
-    --bg-primary: #0a0f1c; /* Deep navy instead of pure black */
-    --bg-secondary: #111827; /* Softer dark gray-blue */
-    --bg-card: #1e293b; /* Muted dark slate */
-    --text-primary: #f1f5f9; /* Soft white */
-    --text-secondary: #94a3b8; /* Cool gray */
+    --bg-primary: #0a0f1c;
+    --bg-secondary: #111827;
+    --bg-card: #1e293b;
+    --text-primary: #f1f5f9;	
+    --text-secondary: #94a3b8;
     --border-color: #1e293b;
     --shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
     --shadow-lg: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
     --gradient: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     --cyber-gradient: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #f59e0b);
-    
 }
-
-
 
         
         /* Cybersecurity Effects */
@@ -341,14 +337,16 @@
         }
 
         .terminal-text {
-            font-family: 'Courier New', monospace;
-            color: var(--primary-color);
-            background: rgba(0, 0, 0, 0.8);
-            padding: 1rem;
-            border-radius: 5px;
-            border-left: 3px solid var(--primary-color);
-            margin: 1rem 0;
-        }
+    font-family: 'Courier New', monospace;
+    background: var(--bg-primary);   /* white in light, black in dark */
+    color: var(--text-primary);      /* dark text in light, light text in dark */
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    margin: 1rem 0;
+    box-shadow: var(--shadow);
+}
+
 
         .binary-bg {
             position: fixed;
@@ -409,16 +407,17 @@
 
         /* Header */
         header {
-            background: rgba(10, 10, 10, 0.95);
+            background: var(--bg-primary);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 255, 136, 0.1);
+            box-shadow: var(--shadow);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+            border-bottom: 1px solid var(--border-color);
         }
+
 
         nav {
             display: flex;
@@ -1082,10 +1081,11 @@
                 <div class="about-content fade-in">
                     <div class="contact-card cyber-border">
                         <div class="profile-photo floating">
-                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23333'/><circle cx='35' cy='40' r='8' fill='%23fff'/><circle cx='65' cy='40' r='8' fill='%23fff'/><path d='M30 65 Q50 75 70 65' stroke='%23fff' stroke-width='3' fill='none'/></svg>" alt="Profile" style="width: 100%; height: 100%; border-radius: 50%;">
+                           <img src="images/profile.jpg" alt="Mohamed Nasr" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
                         </div>
+
                         <h3>Mohamed Nasr</h3>
-                        <p class="title">Senior Electronics & Communication Engineering Student</p>
+                        <p class="title">Senior-1 Electronics & Communication Engineering Student</p>
                         <div class="contact-details">
                             <a href="tel:+201022558806" class="contact-detail">
                                 <span style="font-size: 1.2rem;">📞</span>
@@ -1410,11 +1410,37 @@
 
     <script>
         // Theme Toggle
+        // Theme Toggle - Fixed
         function toggleTheme() {
             const body = document.body;
+            const themeToggle = document.getElementById('themeToggle');
             const currentTheme = body.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
             body.setAttribute('data-theme', newTheme);
+            
+            // Update the button icon
+            themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+            
+            // Save preference to localStorage
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Initialize theme based on saved preference or system preference
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme) {
+                document.body.setAttribute('data-theme', savedTheme);
+                document.getElementById('themeToggle').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+            } else if (systemPrefersDark) {
+                document.body.setAttribute('data-theme', 'dark');
+                document.getElementById('themeToggle').textContent = '☀️';
+            } else {
+                document.body.setAttribute('data-theme', 'light');
+                document.getElementById('themeToggle').textContent = '🌙';
+            }
         }
 
         // Mobile Menu Toggle
@@ -1555,11 +1581,18 @@
         }, 2000);
 
         // Add parallax effect
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-        });
+        // Fixed Header scroll effect
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 100) {
+        header.style.background = 'var(--bg-primary)';
+        header.style.backdropFilter = 'blur(10px)';
+    } else {
+        header.style.background = 'var(--bg-primary)';
+        header.style.backdropFilter = 'none';
+    }
+});
+
 
         // Dynamic greeting based on time
         function updateGreeting() {
