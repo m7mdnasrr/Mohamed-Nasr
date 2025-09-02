@@ -49,7 +49,6 @@
     --cyber-gradient: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #f59e0b);
 }
 
-        
         /* Cybersecurity Effects */
         .matrix-bg {
             position: absolute;
@@ -81,7 +80,7 @@
             width: 100%;
             height: 2px;
             background: var(--cyber-gradient);
-            
+            animation: scanLine 3s linear infinite;
         }
 
         @keyframes scanLine {
@@ -336,7 +335,7 @@
             100% { left: 100%; }
         }
 
-        .terminal-text {
+                .terminal-text {
     font-family: 'Courier New', monospace;
     background: var(--bg-primary);   /* white in light, black in dark */
     color: var(--text-primary);      /* dark text in light, light text in dark */
@@ -346,7 +345,6 @@
     margin: 1rem 0;
     box-shadow: var(--shadow);
 }
-
 
         .binary-bg {
             position: fixed;
@@ -1051,8 +1049,8 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+				<li><a href="#projects">Projects</a></li>
                 <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
@@ -1083,7 +1081,6 @@
                         <div class="profile-photo floating">
                            <img src="profile.jpg" alt="Mohamed Nasr" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
                         </div>
-
                         <h3>Mohamed Nasr</h3>
                         <p class="title">Senior-1 Electronics & Communication Engineering Student</p>
                         <div class="contact-details">
@@ -1126,11 +1123,96 @@
                 </div>
             </div>
         </section>
-
-        <section id="skills">
+		
+		        <section id="experience">
             <div class="container">
-                <h2 class="section-title fade-in">Technical Skills</h2>
-                <div class="skills-grid fade-in">
+                <h2 class="section-title fade-in glitch">🛡️ Leadership & Experience</h2>
+                <div class="timeline fade-in">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023 - Present</div>
+                            <div class="timeline-title">Head of Academic Instructors and Projects Committee</div>
+                            <div class="timeline-org">Pixels Egypt Organization, Helwan</div>
+                            <p>Leading academic initiatives and project development while mentoring fellow students and organizing educational events. Responsible for coordinating training programs and managing technical projects across multiple domains.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2022 - 2027</div>
+                            <div class="timeline-title">Electronics & Communication Engineering Student</div>
+                            <div class="timeline-org">Faculty of Engineering, Helwan University</div>
+                            <p>Specializing in communication systems, signal processing, and network security. Maintaining excellent academic performance while actively participating in research projects and student organizations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+    <section id="certifications" style="background: var(--bg-secondary); padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title fade-in">Certifications & Training</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;" class="fade-in">
+
+                <!-- eJPT -->
+                <div class="cert-badge">
+                    <div style="text-align: center; padding: 2rem; background: var(--bg-primary); border-radius: 15px; box-shadow: var(--shadow); transition: transform 0.3s ease;">
+                        <div style="margin-bottom: 1rem;">
+                            <img src="images/certs/ejpt.png" alt="eJPT Badge" style="width: 100px; height: auto;">
+                        </div>
+                        <h3>eJPT</h3>
+                        <p style="color: var(--text-secondary);">In Progress - 2025</p>
+                    </div>
+                </div>
+
+                <!-- Security+ -->
+                <div class="cert-badge">
+                    <div style="text-align: center; padding: 2rem; background: var(--bg-primary); border-radius: 15px; box-shadow: var(--shadow); transition: transform 0.3s ease;">
+                        <div style="margin-bottom: 1rem;">
+                            <img src="images/certs/securityplus.png" alt="CompTIA Security+ Badge" style="width: 100px; height: auto;">
+                        </div>
+                        <h3>Security+</h3>
+                        <p style="color: var(--text-secondary);">In Progress - 2025</p>
+                    </div>
+                </div>
+
+                <!-- CCNA -->
+                <div class="cert-badge">
+                    <div style="text-align: center; padding: 2rem; background: var(--bg-primary); border-radius: 15px; box-shadow: var(--shadow); transition: transform 0.3s ease;">
+                        <div style="margin-bottom: 1rem;">
+                            <img src="images/certs/ccna.png" alt="CCNA Badge" style="width: 100px; height: auto;">
+                        </div>
+                        <h3>CCNA</h3>
+                        <p style="color: var(--text-secondary);">Completed - 2024</p>
+                    </div>
+                </div>
+
+                <!-- Cloud Computing -->
+                <div class="cert-badge">
+                    <div style="text-align: center; padding: 2rem; background: var(--bg-primary); border-radius: 15px; box-shadow: var(--shadow); transition: transform 0.3s ease;">
+                        <div style="margin-bottom: 1rem;">
+                            <img src="images/certs/cloud.png" alt="Cloud Computing Badge" style="width: 100px; height: auto;">
+                        </div>
+                        <h3>Cloud Computing</h3>
+                        <p style="color: var(--text-secondary);">ITI - 2025</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+		
+
+        
+		
+		<section id="skills"">
+    <div class="container">
+        <h2 class="section-title fade-in">Technical Skills</h2>
+        <div class="skills-grid fade-in">
+           
                     <div class="skill-category">
                         <h3>🔒 Cybersecurity</h3>
                         <div class="skill-item">
@@ -1221,169 +1303,131 @@
                 </div>
             </div>
         </section>
+		
+      <section id="projects" style="background: var(--bg-secondary);">
+    <div class="container">
+        <h2 class="section-title fade-in">Featured Projects</h2>
+        <div class="projects-grid fade-in">
 
-        <section id="experience" class="experience">
-            <div class="container">
-                <h2 class="section-title fade-in">Experience & Education</h2>
-                <div class="timeline fade-in">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-year">2025</div>
-                            <div class="timeline-title">Multiple Certifications & Internships</div>
-                            <div class="timeline-org">Various Organizations</div>
-                            <p>Pursuing eJPT and Security+ certifications, interning at MCIT, completing cloud training at ITI, and computer arithmetic internship at STM.</p>
-                        </div>
+            <div class="project-card">
+                <div class="project-image">🔐</div>
+                <div class="project-content">
+                    <h3 class="project-title">Network Security Scanner</h3>
+                    <p class="project-description">
+                        Advanced network vulnerability scanner built with Python, featuring automated threat detection and comprehensive reporting capabilities.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Nmap</span>
+                        <span class="tech-tag">Cybersecurity</span>
                     </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-year">2025</div>
-                            <div class="timeline-title">Cybersecurity Operations Training</div>
-                            <div class="timeline-org">National Telecommunication Institute</div>
-                            <p>Advanced training in cybersecurity operations, threat detection, and incident response methodologies.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-year">2024</div>
-                            <div class="timeline-title">CCNA & Advanced C++ Training</div>
-                            <div class="timeline-org">NTI & Beta Academy</div>
-                            <p>Completed comprehensive CCNA networking certification and advanced C++ programming training, strengthening both networking and development skills.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-year">2023 - Present</div>
-                            <div class="timeline-title">Head of Academic Instructors and Projects Committee</div>
-                            <div class="timeline-org">Pixels Egypt Organization</div>
-                            <p>Leading academic initiatives and project development while mentoring fellow students and organizing educational events.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-year">2023</div>
-                            <div class="timeline-title">Robotics Training</div>
-                            <div class="timeline-org">Beta Academy</div>
-                            <p>Foundations in robotics engineering, automation systems, and embedded programming.</p>
-                        </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Code</a>
+                        <a href="#" class="project-link">Documentation</a>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="projects">
-            <div class="container">
-                <h2 class="section-title fade-in">Featured Projects</h2>
-                <div class="projects-grid fade-in">
-                    <div class="project-card">
-                        <div class="project-image">🔐</div>
-                        <div class="project-content">
-                            <h3 class="project-title">Network Security Scanner</h3>
-                            <p class="project-description">Advanced network vulnerability scanner built with Python, featuring automated threat detection and comprehensive reporting capabilities.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Nmap</span>
-                                <span class="tech-tag">Cybersecurity</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">View Code</a>
-                                <a href="#" class="project-link">Documentation</a>
-                            </div>
-                        </div>
+            <div class="project-card">
+                <div class="project-image">📡</div>
+                <div class="project-content">
+                    <h3 class="project-title">Network Configuration Tool</h3>
+                    <p class="project-description">
+                        Automated network configuration and monitoring tool designed for enterprise environments with CCNA best practices implementation.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Networking</span>
+                        <span class="tech-tag">CCNA</span>
+                        <span class="tech-tag">Automation</span>
                     </div>
-
-                    <div class="project-card">
-                        <div class="project-image">📡</div>
-                        <div class="project-content">
-                            <h3 class="project-title">Network Configuration Tool</h3>
-                            <p class="project-description">Automated network configuration and monitoring tool designed for enterprise environments with CCNA best practices implementation.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Networking</span>
-                                <span class="tech-tag">CCNA</span>
-                                <span class="tech-tag">Automation</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">View Code</a>
-                                <a href="#" class="project-link">Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">⚡</div>
-                        <div class="project-content">
-                            <h3 class="project-title">Digital Signal Processor</h3>
-                            <p class="project-description">Custom digital signal processing application for communication systems with real-time analysis and filtering capabilities.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">DSP</span>
-                                <span class="tech-tag">MATLAB</span>
-                                <span class="tech-tag">Communications</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">View Code</a>
-                                <a href="#" class="project-link">Research Paper</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">🛡️</div>
-                        <div class="project-content">
-                            <h3 class="project-title">Cybersecurity Training Platform</h3>
-                            <p class="project-description">Educational platform developed for Pixels Egypt to train students in cybersecurity fundamentals with hands-on labs and assessments.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Web Development</span>
-                                <span class="tech-tag">Education</span>
-                                <span class="tech-tag">Security</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">Visit Platform</a>
-                                <a href="#" class="project-link">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">☁️</div>
-                        <div class="project-content">
-                            <h3 class="project-title">Cloud Infrastructure Project</h3>
-                            <p class="project-description">Scalable cloud infrastructure design and implementation project completed during ITI training program with focus on security and performance.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Cloud Computing</span>
-                                <span class="tech-tag">Infrastructure</span>
-                                <span class="tech-tag">DevOps</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">Architecture</a>
-                                <a href="#" class="project-link">Deployment Guide</a>
-                            </div>
-                        </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Code</a>
+                        <a href="#" class="project-link">Case Study</a>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <div class="project-card">
+                <div class="project-image">⚡</div>
+                <div class="project-content">
+                    <h3 class="project-title">Digital Signal Processor</h3>
+                    <p class="project-description">
+                        Custom digital signal processing application for communication systems with real-time analysis and filtering capabilities.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">DSP</span>
+                        <span class="tech-tag">MATLAB</span>
+                        <span class="tech-tag">Communications</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Code</a>
+                        <a href="#" class="project-link">Research Paper</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🛡️</div>
+                <div class="project-content">
+                    <h3 class="project-title">Cybersecurity Training Platform</h3>
+                    <p class="project-description">
+                        Educational platform developed for Pixels Egypt to train students in cybersecurity fundamentals with hands-on labs and assessments.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Web Development</span>
+                        <span class="tech-tag">Education</span>
+                        <span class="tech-tag">Security</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Visit Platform</a>
+                        <a href="#" class="project-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">☁️</div>
+                <div class="project-content">
+                    <h3 class="project-title">Cloud Infrastructure Project</h3>
+                    <p class="project-description">
+                        Scalable cloud infrastructure design and implementation project completed during ITI training program with focus on security and performance.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Cloud Computing</span>
+                        <span class="tech-tag">Infrastructure</span>
+                        <span class="tech-tag">DevOps</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Architecture</a>
+                        <a href="#" class="project-link">Deployment Guide</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+         
+
 
         <section id="contact">
             <div class="container">
                 <h2 class="section-title fade-in">Let's Connect</h2>
                 <div class="fade-in" style="text-align: center; max-width: 600px; margin: 0 auto;">
+                    <div class="terminal-text" style="margin-bottom: 2rem;">
+                        <span style="color: var(--primary-color);">mohamed@security:~$</span> ./connect --professional --collaboration<br>
+                        <span style="color: var(--cyber-blue);">Establishing secure connection...</span><br>
+                        <span style="color: var(--primary-color);">Ready for professional collaboration! 🤝</span>
+                    </div>
                     <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-secondary);">
                         I'm always open to discussing new opportunities, collaborating on exciting projects, or sharing knowledge about cybersecurity and electronics engineering.
                     </p>
                     <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                        <a href="mailto:mohamednasreldin122@gmail.com" class="cta-button" style="background: var(--gradient); color: white; border: none;">
-                            Send Email
+                        <a href="mailto:mohamednasreldin122@gmail.com" class="cta-button neon-glow" style="background: var(--gradient); color: white; border: none;">
+                            📧 Send Email
                         </a>
-                        <a href="tel:+201022558806" class="cta-button" style="background: var(--gradient); color: white; border: none;">
-                            Call Me
+                        <a href="tel:+201022558806" class="cta-button neon-glow" style="background: var(--gradient); color: white; border: none;">
+                            📞 Call Me
                         </a>
                     </div>
                 </div>
@@ -1396,7 +1440,6 @@
             <div class="footer-content">
                 <div>
                     <p>&copy; 2025 Mohamed Nasr. All rights reserved.</p>
-                    <p style="color: var(--text-secondary); margin-top: 0.5rem;">Electronics & Communication Engineering Student | Cybersecurity Enthusiast</p>
                 </div>
                 <div class="social-links">
                     <a href="#" class="social-link">📧</a>
@@ -1409,38 +1452,15 @@
     </footer>
 
     <script>
+        // Initialize theme as dark by default (cybersecurity theme)
+        document.body.setAttribute('data-theme', 'dark');
+
         // Theme Toggle
-        // Theme Toggle - Fixed
         function toggleTheme() {
             const body = document.body;
-            const themeToggle = document.getElementById('themeToggle');
             const currentTheme = body.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
             body.setAttribute('data-theme', newTheme);
-            
-            // Update the button icon
-            themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
-            
-            // Save preference to localStorage
-            localStorage.setItem('theme', newTheme);
-        }
-
-        // Initialize theme based on saved preference or system preference
-        function initTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-            
-            if (savedTheme) {
-                document.body.setAttribute('data-theme', savedTheme);
-                document.getElementById('themeToggle').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
-            } else if (systemPrefersDark) {
-                document.body.setAttribute('data-theme', 'dark');
-                document.getElementById('themeToggle').textContent = '☀️';
-            } else {
-                document.body.setAttribute('data-theme', 'light');
-                document.getElementById('themeToggle').textContent = '🌙';
-            }
         }
 
         // Mobile Menu Toggle
@@ -1511,20 +1531,18 @@
 
         // Header scroll effect
         window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-            } else {
-                header.style.background = 'var(--bg-primary)';
-                header.style.backdropFilter = 'none';
-            }
-        });
+    const header = document.querySelector('header');
+    if (window.scrollY > 100) {
+        header.style.background = 'var(--bg-primary)';
+        header.style.backdropFilter = 'blur(10px)';
+    } else {
+        header.style.background = 'var(--bg-primary)';
+        header.style.backdropFilter = 'none';
+    }
+});
 
-        // Initialize theme based on system preference
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-            document.body.setAttribute('data-theme', 'light');
-        }
+        // Initialize theme as dark (cybersecurity aesthetic)
+        document.body.setAttribute('data-theme', 'dark');
 
         // Particle animation for hero section
         function createParticles() {
@@ -1556,8 +1574,126 @@
         `;
         document.head.appendChild(style);
 
-        // Initialize particles
+        // Initialize particles and cybersecurity effects
         createParticles();
+        createMatrixRain();
+        createCyberEffects();
+
+        // Matrix Rain Effect
+        function createMatrixRain() {
+            const canvas = document.createElement('canvas');
+            canvas.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                z-index: -1;
+                opacity: 0.1;
+            `;
+            document.body.appendChild(canvas);
+
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const chars = '01';
+            const fontSize = 14;
+            const columns = canvas.width / fontSize;
+            const drops = Array(Math.floor(columns)).fill(1);
+
+            function drawMatrix() {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                ctx.fillStyle = '#00ff88';
+                ctx.font = fontSize + 'px monospace';
+
+                drops.forEach((y, i) => {
+                    const text = chars[Math.floor(Math.random() * chars.length)];
+                    ctx.fillText(text, i * fontSize, y * fontSize);
+
+                    if (y * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                });
+            }
+
+            setInterval(drawMatrix, 50);
+
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        }
+
+        // Cybersecurity Effects
+        function createCyberEffects() {
+            // Add scanning effect to project cards
+            document.querySelectorAll('.cybersecurity-project').forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.classList.add('scan-line');
+                });
+                card.addEventListener('mouseleave', () => {
+                    setTimeout(() => {
+                        card.classList.remove('scan-line');
+                    }, 3000);
+                });
+            });
+
+            // Add terminal typing effect
+            const terminalElements = document.querySelectorAll('.terminal-text');
+            terminalElements.forEach(terminal => {
+                const originalHTML = terminal.innerHTML;
+                terminal.innerHTML = '';
+                let i = 0;
+                function typeTerminal() {
+                    if (i < originalHTML.length) {
+                        terminal.innerHTML = originalHTML.slice(0, i + 1);
+                        i++;
+                        setTimeout(typeTerminal, 20);
+                    }
+                }
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            typeTerminal();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                observer.observe(terminal);
+            });
+        }
+
+        // Enhanced counter animation with cyber effects
+        function animateCounters() {
+            const counters = [
+                { element: 'projects-count', target: 15, suffix: '+' },
+                { element: 'certifications-count', target: 10, suffix: '' },
+                { element: 'experience-count', target: 3, suffix: '+' }
+            ];
+
+            counters.forEach(counter => {
+                const element = document.getElementById(counter.element);
+                if (element) {
+                    let count = 0;
+                    const increment = counter.target / 60;
+                    const timer = setInterval(() => {
+                        count += increment;
+                        if (count >= counter.target) {
+                            count = counter.target;
+                            clearInterval(timer);
+                            element.classList.add('neon-glow');
+                        }
+                        element.textContent = Math.floor(count) + counter.suffix;
+                    }, 50);
+                }
+            });
+        }
 
         // Add typing effect to hero subtitle
         function typeWriter(element, text, speed = 50) {
@@ -1581,18 +1717,11 @@
         }, 2000);
 
         // Add parallax effect
-        // Fixed Header scroll effect
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (window.scrollY > 100) {
-        header.style.background = 'var(--bg-primary)';
-        header.style.backdropFilter = 'blur(10px)';
-    } else {
-        header.style.background = 'var(--bg-primary)';
-        header.style.backdropFilter = 'none';
-    }
-});
-
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
 
         // Dynamic greeting based on time
         function updateGreeting() {
@@ -1630,27 +1759,76 @@ window.addEventListener('scroll', () => {
             progressBar.style.width = scrollPercent + '%';
         });
 
-        // Add click effects
+        // Add click effects with cyber theme
         document.addEventListener('click', (e) => {
             const ripple = document.createElement('div');
             ripple.style.cssText = `
                 position: absolute;
                 border-radius: 50%;
-                background: rgba(59, 130, 246, 0.3);
+                background: radial-gradient(circle, rgba(0, 255, 136, 0.4), transparent);
                 transform: scale(0);
-                animation: ripple 0.6s linear;
+                animation: cyberRipple 0.8s linear;
                 pointer-events: none;
-                left: ${e.clientX - 25}px;
-                top: ${e.clientY - 25}px;
-                width: 50px;
-                height: 50px;
+                left: ${e.clientX - 30}px;
+                top: ${e.clientY - 30}px;
+                width: 60px;
+                height: 60px;
                 z-index: 9999;
+                box-shadow: 0 0 20px var(--primary-color);
             `;
             document.body.appendChild(ripple);
 
             setTimeout(() => {
                 ripple.remove();
-            }, 600);
+            }, 800);
+        });
+
+        // Add cyber ripple animation
+        const cyberRippleStyle = document.createElement('style');
+        cyberRippleStyle.textContent = `
+            @keyframes cyberRipple {
+                0% {
+                    transform: scale(0);
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0.5;
+                }
+                100% {
+                    transform: scale(6);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(cyberRippleStyle);
+
+        // Add pulsing effect to contact card
+        setInterval(() => {
+            const profilePhoto = document.querySelector('.profile-photo');
+            if (profilePhoto) {
+                profilePhoto.style.boxShadow = '0 0 30px rgba(0, 255, 136, 0.8)';
+                setTimeout(() => {
+                    profilePhoto.style.boxShadow = '0 0 20px rgba(0, 255, 136, 0.3)';
+                }, 500);
+            }
+        }, 3000);
+
+        // Add progressive enhancement for certification items
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.querySelectorAll('.cert-item').forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateX(-50px)';
+                        item.style.transition = 'all 0.6s ease';
+                        
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateX(0)';
+                        }, 100);
+                    }, index * 200);
+                });
+            }, 1000);
         });
 
         // Add ripple animation
@@ -1665,9 +1843,9 @@ window.addEventListener('scroll', () => {
         `;
         document.head.appendChild(rippleStyle);
 
-        // Add floating elements animation
+        // Add cyber-themed floating elements
         function createFloatingElements() {
-            const floatingElements = ['💻', '🔒', '🌐', '⚡', '🚀', '🎯'];
+            const floatingElements = ['🔒', '🛡️', '⚡', '🌐', '💻', '🎯', '📡', '🔐'];
             const hero = document.querySelector('.hero');
             
             floatingElements.forEach((emoji, index) => {
@@ -1676,11 +1854,12 @@ window.addEventListener('scroll', () => {
                 element.style.cssText = `
                     position: absolute;
                     font-size: 2rem;
-                    opacity: 0.1;
+                    opacity: 0.15;
                     pointer-events: none;
-                    animation: floatRandom ${10 + index * 2}s infinite ease-in-out;
+                    animation: floatRandom ${8 + index * 2}s infinite ease-in-out;
                     top: ${Math.random() * 80}%;
                     left: ${Math.random() * 90}%;
+                    filter: drop-shadow(0 0 10px var(--primary-color));
                 `;
                 hero.appendChild(element);
             });
@@ -1708,44 +1887,7 @@ window.addEventListener('scroll', () => {
 
         createFloatingElements();
 
-        // Add certificate badges section
-        const certificationsHTML = `
-            <section id="certifications" style="background: var(--bg-secondary); padding: 80px 0;">
-                <div class="container">
-                    <h2 class="section-title fade-in">Certifications & Training</h2>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;" class="fade-in">
-                        <div class="cert-badge">
-                            <div style="text-align: center; padding: 2rem; background: var(--bg-primary); border-radius: 15px; box-shadow: var(--shadow); transition: transform 0.3s ease;">
-                                <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
-                                <h3>eJPT</h3>
-                                <p style="color: var(--text-secondary);">In Progress - 2025</p>
-                            </div>
-                        </div>
-                        <div class="cert-badge">
-                            <div style="text-align: center; padding: 2rem; background: var(--bg-primary); border-radius: 15px; box-shadow: var(--shadow); transition: transform 0.3s ease;">
-                                <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
-                                <h3>Security+</h3>
-                                <p style="color: var(--text-secondary);">In Progress - 2025</p>
-                            </div>
-                        </div>
-                        <div class="cert-badge">
-                            <div style="text-align: center; padding: 2rem; background: var(--bg-primary); border-radius: 15px; box-shadow: var(--shadow); transition: transform 0.3s ease;">
-                                <div style="font-size: 3rem; margin-bottom: 1rem;">🌐</div>
-                                <h3>CCNA</h3>
-                                <p style="color: var(--text-secondary);">Completed - 2024</p>
-                            </div>
-                        </div>
-                        <div class="cert-badge">
-                            <div style="text-align: center; padding: 2rem; background: var(--bg-primary); border-radius: 15px; box-shadow: var(--shadow); transition: transform 0.3s ease;">
-                                <div style="font-size: 3rem; margin-bottom: 1rem;">☁️</div>
-                                <h3>Cloud Computing</h3>
-                                <p style="color: var(--text-secondary);">ITI - 2025</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        `;
+     
 
         // Insert certifications section before contact
         const contactSection = document.getElementById('contact');
@@ -1814,7 +1956,7 @@ window.addEventListener('scroll', () => {
 
         // Insert stats section after skills
         const skillsSection = document.getElementById('skills');
-        skillsSection.insertAdjacentHTML('afteren	d', statsHTML);
+        skillsSection.insertAdjacentHTML('afterend', statsHTML);
 
         // Trigger counter animation when stats section is visible
         const statsObserver = new IntersectionObserver((entries) => {
