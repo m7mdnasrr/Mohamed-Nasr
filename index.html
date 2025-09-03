@@ -389,6 +389,8 @@
     box-shadow: var(--shadow);
 }
 
+
+
         .binary-bg {
             position: fixed;
             top: 0;
@@ -648,11 +650,12 @@
 
 
         .about-content {
-            display: grid;
-            grid-template-columns: 400px 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
 
         .about-image {
             width: 300px;
@@ -948,6 +951,46 @@
             background: var(--secondary-color);
             transform: translateY(-3px);
         }
+		
+		.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-category h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.skill-item {
+    margin-bottom: 1rem;
+}
+
+.skill-name {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.skill-bar {
+    background: var(--bg-secondary);
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
+
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -1193,9 +1236,9 @@
                         
                         <div class="terminal-text">
                             <span style="color: var(--primary-color);">mohamed@security:~$</span> cat specializations.txt<br>
-                            <span style="color: var(--cyber-blue);">→ Cybersecurity Operations</span><br>
-                            <span style="color: var(--cyber-purple);">→ Network Security & CCNA</span><br>
-                            <span style="color: var(--accent-color);">→ Electronics & Communication</span><br>
+                            <span style="color: var(--cyber-blue);">→ Electronics & Communication</span><br>
+                            <span style="color: var(--cyber-purple);">→ Computer Networks & Network Security</span><br>
+                            <span style="color: var(--accent-color);">→ Cybersecurity Operations & Penetration Testing</span><br>
                             <span style="color: var(--primary-color);">→ Leadership & Education</span>
                         </div>
                     </div>
@@ -1332,13 +1375,13 @@
                         <div class="skill-item">
                             <span>Network Security</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
+                                <div class="skill-progress" style="width: 75%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <span>Penetration Testing</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                                <div class="skill-progress" style="width: 60%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
@@ -1352,7 +1395,7 @@
                     <div class="skill-category">
                         <h3>🌐 Networking</h3>
                         <div class="skill-item">
-                            <span>CCNA</span>
+                            <span>Routing & Switching</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 90%"></div>
                             </div>
@@ -1360,11 +1403,11 @@
                         <div class="skill-item">
                             <span>Network Protocols</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
+                                <div class="skill-progress" style="width: 95%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span>Network Design</span>
+                            <span>Network Security</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 75%"></div>
                             </div>
@@ -1374,43 +1417,43 @@
                     <div class="skill-category">
                         <h3>💻 Programming</h3>
                         <div class="skill-item">
-                            <span>C/C++</span>
+                            <span>C</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
+                                <div class="skill-progress" style="width: 90%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span>Python</span>
+                            <span>C++</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span>Electronics Design</span>
+                            <span>Python</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
+                                <div class="skill-progress" style="width: 70%"></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="skill-category">
-                        <h3>☁️ Cloud & Infrastructure</h3>
+                        <h3>☁️ Cloud computing</h3>
                         <div class="skill-item">
                             <span>Cloud Computing</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
+                                <div class="skill-progress" style="width: 40%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <span>System Administration</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
+                                <div class="skill-progress" style="width: 90%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span>Computer Arithmetic</span>
+                            <span>Cloud Security</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
+                                <div class="skill-progress" style="width: 20%"></div>
                             </div>
                         </div>
                     </div>
@@ -1518,8 +1561,8 @@
                 <div class="social-links">
 				    <a href="+201022558806" class="social-link">📱</a>
                     <a href="mailto:mohamednasreldin122@gmail.com" class="social-link">📧</a>
-                    <a href="https://github.com/m7mdnasrr" class="social-link">💼</a>
                     <a href="https://www.linkedin.com/in/mohamed-nasr-4aa4561b3/" class="social-link">🌐</a>
+					<a href="https://github.com/m7mdnasrr" class="social-link">💼</a>
                 </div>
             </div>
         </div>
