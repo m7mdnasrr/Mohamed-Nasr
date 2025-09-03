@@ -247,6 +247,24 @@
     transition: transform 0.3s ease;
 }
 
+.project-tech {
+    list-style: none;   /* remove bullets */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.project-tech li {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+
 /* Fix cert badges visibility in dark mode */
 [data-theme="dark"] .cert-badge > div {
     background: #2d3748 !important;   /* medium-dark gray for contrast */
@@ -1358,108 +1376,68 @@
         </section>
 		
       <section id="projects" style="background: var(--bg-secondary);">
-    <div class="container">
+      <div class="container">
         <h2 class="section-title fade-in">Featured Projects</h2>
         <div class="projects-grid fade-in">
 
+            <!-- Project 1 -->
             <div class="project-card">
-                <div class="project-image">🔐</div>
+                <div class="project-image">🧠</div>
                 <div class="project-content">
-                    <h3 class="project-title">Network Security Scanner</h3>
+                    <h3 class="project-title">Electromyogram (EMG) Signal Processing System</h3>
+                    
                     <p class="project-description">
-                        Advanced network vulnerability scanner built with Python, featuring automated threat detection and comprehensive reporting capabilities.
+                        Designed and implemented an EMG-based signal acquisition and processing system for measuring muscle strength, particularly for rehabilitation applications.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Nmap</span>
-                        <span class="tech-tag">Cybersecurity</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">View Code</a>
-                        <a href="#" class="project-link">Documentation</a>
-                    </div>
+                    <ul class="project-tech">
+                        <li class="tech-tag">Instrumentation Amplifiers</li>
+                        <li class="tech-tag">Filters</li>
+                        <li class="tech-tag">ADC</li>
+                        <li class="tech-tag">ATmega328P</li>
+                        <li class="tech-tag">Proteus</li>
+                    </ul>
                 </div>
             </div>
 
+            <!-- Project 2 -->
             <div class="project-card">
                 <div class="project-image">📡</div>
                 <div class="project-content">
-                    <h3 class="project-title">Network Configuration Tool</h3>
+                    <h3 class="project-title">AM Radio System</h3>
+                    
                     <p class="project-description">
-                        Automated network configuration and monitoring tool designed for enterprise environments with CCNA best practices implementation.
+                        Designed and implemented an AM Radio System that transmits and receives AM signals using the superheterodyne circuit of Armstrong. Ensured proper modulation and demodulation for high-fidelity transmission.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Networking</span>
-                        <span class="tech-tag">CCNA</span>
-                        <span class="tech-tag">Automation</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">View Code</a>
-                        <a href="#" class="project-link">Case Study</a>
-                    </div>
+                    <ul class="project-tech">
+                        <li class="tech-tag">AM Transmission</li>
+                        <li class="tech-tag">Superheterodyne</li>
+                        <li class="tech-tag">Modulation</li>
+                        <li class="tech-tag">Demodulation</li>
+                    </ul>
                 </div>
             </div>
 
+            <!-- Project 3 -->
             <div class="project-card">
-                <div class="project-image">⚡</div>
+                <div class="project-image">🎤</div>
                 <div class="project-content">
-                    <h3 class="project-title">Digital Signal Processor</h3>
+                    <h3 class="project-title">Audio Amplifier</h3>
+                    
                     <p class="project-description">
-                        Custom digital signal processing application for communication systems with real-time analysis and filtering capabilities.
+                        Developed a public address system with audio preamplification and power amplification. Enabled clear, amplified audio output from a microphone input, ensuring minimal distortion.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">DSP</span>
-                        <span class="tech-tag">MATLAB</span>
-                        <span class="tech-tag">Communications</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">View Code</a>
-                        <a href="#" class="project-link">Research Paper</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">🛡️</div>
-                <div class="project-content">
-                    <h3 class="project-title">Cybersecurity Training Platform</h3>
-                    <p class="project-description">
-                        Educational platform developed for Pixels Egypt to train students in cybersecurity fundamentals with hands-on labs and assessments.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Web Development</span>
-                        <span class="tech-tag">Education</span>
-                        <span class="tech-tag">Security</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Visit Platform</a>
-                        <a href="#" class="project-link">Learn More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">☁️</div>
-                <div class="project-content">
-                    <h3 class="project-title">Cloud Infrastructure Project</h3>
-                    <p class="project-description">
-                        Scalable cloud infrastructure design and implementation project completed during ITI training program with focus on security and performance.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Cloud Computing</span>
-                        <span class="tech-tag">Infrastructure</span>
-                        <span class="tech-tag">DevOps</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Architecture</a>
-                        <a href="#" class="project-link">Deployment Guide</a>
-                    </div>
+                    <ul class="project-tech">
+                        <li class="tech-tag">Preamplifier</li>
+                        <li class="tech-tag">Power Amplifier</li>
+                        <li class="tech-tag">Audio Systems</li>
+                    </ul>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+
          
 
 
