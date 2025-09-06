@@ -333,6 +333,42 @@
             background: var(--gradient);
             border-color: var(--primary-color);
         }
+
+        /* Floating particles animation */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--cyber-blue);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: float 6s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
        
         /* Professional Contact Card */
         .contact-card {
@@ -767,82 +803,152 @@
         }
 
         /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
+        /* Enhanced Hero Section */
+.hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(96,165,250,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            animation: gridMove 20s linear infinite;
-        }
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(96,165,250,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    animation: gridMove 20s linear infinite;
+}
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
+@keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(10px, 10px); }
+}
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease-out;
-        }
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out;
+    background: linear-gradient(135deg, #ffffff, #60a5fa, #06b6d4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        .hero-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease-out 0.2s both;
-        }
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out 0.2s both;
+    font-family: 'JetBrains Mono', monospace;
+}
 
-        .cta-button {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
+.typing-effect {
+    border-right: 2px solid var(--cyber-blue);
+    animation: none;
+}
 
-        .cta-button:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
+@keyframes blink {
+    0%, 50% { border-color: transparent; }
+    51%, 100% { border-color: var(--cyber-blue); }
+}
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cta-primary {
+    background: var(--gradient);
+    border-color: var(--primary-color);
+}
+
+/* Floating particles animation */
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--cyber-blue);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
         /* Sections */
         section {
@@ -867,6 +973,20 @@
             background: var(--gradient);
             border-radius: 2px;
         }
+		
+		.cursor {
+  display: inline-block;
+  width: 2px;
+  background: var(--cyber-blue);
+  margin-left: 5px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
 
         /* About Section */
         .about {
@@ -1403,7 +1523,12 @@
 				<li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+			<div class="theme-controls">
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <span id="themeIcon">🌙</span>
+        <span id="themeText">Dark</span>
+    </button>
+</div>
             <div class="mobile-menu" onclick="toggleMobileMenu()">
                 <div class="hamburger"></div>
                 <div class="hamburger"></div>
@@ -1413,12 +1538,20 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Mohamed Nasr</h1>
-                    <p class="hero-subtitle">Electronics & Communication Engineering Student | Cybersecurity Enthusiast</p>
-                    <a href="#about" class="cta-button">Discover My Journey</a>
+               <section id="home" class="hero">
+            <div class="particles" id="particles"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Mohamed Nasr</h1>
+                <p class="hero-subtitle">
+                    <span class="typing-effect" id="typingText">Electronics & Communication Engineering Student | Cybersecurity Enthusiast</span>
+                </p>
+                <div class="cta-buttons">
+                    <a href="#about" class="cta-button cta-primary">
+                        🚀 Explore My Work
+                    </a>
+                    <a href="#contact" class="cta-button">
+                        📧 Get In Touch
+                    </a>
                 </div>
             </div>
         </section>
@@ -1459,7 +1592,7 @@
                         </div>
                         <p>I am a passionate Electronics and Communication Engineering student at Helwan University, currently in my senior year. My journey combines technical excellence with leadership, as I serve as Head of Academic Instructors and Projects Committee at Pixels Egypt Organization.</p>
                         
-                        <p>As an Information Security Enthusiast, I continuously expand my knowledge through specialized training programs at the National Telecommunication Institute and Beta Academy. My expertise spans from low-level hardware design to advanced cybersecurity operations.</p>
+                        <p>As an Information Security Enthusiast, I continuously expand my knowledge through specialized training programs and self studying. My expertise spans from low-level hardware design to advanced cybersecurity operations.</p>
                         
                         <p>I believe in the power of knowledge sharing and actively participate in student activities to enhance both technical skills and soft skills while building meaningful connections with peers in the field.</p>
                         
@@ -1482,14 +1615,14 @@
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-year">2023 - 2025</div>
+                            <div class="timeline-year">2024 - 2025</div>
                             <div class="timeline-title">Head of Academic Instructors and Projects Committee</div>
                             <div class="timeline-org">Pixels Egypt Organization, Helwan</div>
                             <p>Leading academic initiatives and project development while mentoring fellow students and organizing educational events. Responsible for coordinating training programs and managing technical projects across multiple domains.</p>
                         </div>
                     </div>
-
-                    <div class="timeline-item">
+					
+					<div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <div class="timeline-year">2024 - 2025</div>
@@ -1499,6 +1632,17 @@
                         </div>
                     </div>
 					
+					<div class="timeline fade-in">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023 - 2024</div>
+                            <div class="timeline-title">Academic Instructor</div>
+                            <div class="timeline-org">Pixels Egypt Organization, Helwan</div>
+                            <p>Developed curriculum and delivered training sessions on Robotics. Mentored students and guided their career development in technology.</p>
+                        </div>
+                    </div>
+
 					<div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
@@ -1790,7 +1934,7 @@
                     <p>&copy; 2025 Mohamed Nasr. All rights reserved.</p>
                 </div>
                 <div class="social-links">
-				    <a href="tel:+201022558806" class="social-link">📱</a>
+				    <a href="+201022558806" class="social-link">📱</a>
                     <a href="mailto:mohamednasreldin122@gmail.com" class="social-link">📧</a>
                     <a href="https://www.linkedin.com/in/mohamed-nasr-4aa4561b3/" class="social-link">🌐</a>
 					<a href="https://github.com/m7mdnasrr" class="social-link">💼</a>
@@ -1800,641 +1944,480 @@
     </footer>
 
     <script>
-        // Initialize theme as dark by default (cybersecurity theme)
-        document.body.setAttribute('data-theme', 'dark');
+// Initialize theme as dark by default
+document.body.setAttribute('data-theme', 'dark');
 
-        
-		 // Theme Management
-        function toggleTheme() {
-            const body = document.body;
-            const themeIcon = document.getElementById('themeIcon');
-            const themeText = document.getElementById('themeText');
-            const currentTheme = body.getAttribute('data-theme');
-            
-            if (currentTheme === 'dark') {
-                body.setAttribute('data-theme', 'light');
-                themeIcon.textContent = '☀️';
-                themeText.textContent = 'Light';
-                localStorage.setItem('theme', 'light');
-            } else {
-                body.setAttribute('data-theme', 'dark');
-                themeIcon.textContent = '🌙';
-                themeText.textContent = 'Dark';
-                localStorage.setItem('theme', 'dark');
-            }
+// Enhanced Theme Management
+function toggleTheme() {
+    const body = document.body;
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+    const currentTheme = body.getAttribute('data-theme');
+    
+    if (currentTheme === 'dark') {
+        body.setAttribute('data-theme', 'light');
+        if (themeIcon) themeIcon.textContent = '☀️';
+        if (themeText) themeText.textContent = 'Light';
+        localStorage.setItem('theme', 'light');
+    } else {
+        body.setAttribute('data-theme', 'dark');
+        if (themeIcon) themeIcon.textContent = '🌙';
+        if (themeText) themeText.textContent = 'Dark';
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.body.setAttribute('data-theme', savedTheme);
+
+// Enhanced Typing Effect for Hero Title (Name)
+function typeHeroName(element, text, speed = 150) {
+    element.textContent = '';
+    let i = 0;
+    
+    function typeName() {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeName, speed);
+        } else {
+            setTimeout(() => {
+                startSubtitleTyping();
+            }, 500);
+        }
+    }
+    
+    typeName();
+}
+
+// Enhanced Typing Effect for Subtitle (Cycling Text)
+function typeWriter(element, texts, speed = 100) {
+    let textIndex = 0;
+    let charIndex = 0;
+    let currentText = '';
+    let isDeleting = false;
+
+    function type() {
+        const fullText = texts[textIndex];
+
+        if (isDeleting) {
+            currentText = fullText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            currentText = fullText.substring(0, charIndex + 1);
+            charIndex++;
         }
 
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        document.body.setAttribute('data-theme', savedTheme);
-        const themeIcon = document.getElementById('themeIcon');
-        const themeText = document.getElementById('themeText');
-        if (savedTheme === 'light') {
-            themeIcon.textContent = '☀️';
-            themeText.textContent = 'Light';
-        }
-		
-		
+        element.textContent = currentText; // ✅ no blinking, just text
 
-        // Mobile Menu Toggle
-        function toggleMobileMenu() {
+        let delta = isDeleting ? speed / 4 : speed;
+
+        if (!isDeleting && charIndex === fullText.length) {
+            delta = 2000; // pause at end
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+            delta = 500;
+        }
+
+        setTimeout(type, delta);
+    }
+
+    type();
+}
+
+// Usage
+document.addEventListener("DOMContentLoaded", () => {
+    const typingTexts = [
+        'Electronics & Communication Engineering Student',
+        'Cybersecurity Enthusiast',
+        'Network Security Specialist',
+        'Information Security Researcher',
+        'Penetration Testing Specialist',
+        'Network Security Engineer'
+    ];
+    const typingElement = document.getElementById('typingText');
+    typeWriter(typingElement, typingTexts, 100);
+});
+
+
+// Initialize both typing effects
+function initializeTypingEffects() {
+    const nameElement = document.getElementById('typedName');
+    
+    if (nameElement) {
+        typeHeroName(nameElement, 'Mohamed Nasr');
+    } else {
+        startSubtitleTyping();
+    }
+}
+
+// Particle Animation
+function createParticles() {
+    const particlesContainer = document.getElementById('particles');
+    if (!particlesContainer) return;
+    
+    const particleCount = 50;
+
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 6 + 's';
+        particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        particlesContainer.appendChild(particle);
+    }
+}
+
+// Mobile Menu Toggle
+function toggleMobileMenu() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
 }
 
+// Matrix Rain Effect
+function createMatrixRain() {
+    const canvas = document.createElement('canvas');
+    canvas.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+        opacity: 0.1;
+    `;
+    document.body.appendChild(canvas);
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const chars = '01';
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function drawMatrix() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = '#00ff88';
+        ctx.font = fontSize + 'px monospace';
+
+        drops.forEach((y, i) => {
+            const text = chars[Math.floor(Math.random() * chars.length)];
+            ctx.fillText(text, i * fontSize, y * fontSize);
+
+            if (y * fontSize > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+            drops[i]++;
         });
+    }
 
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    setInterval(drawMatrix, 50);
 
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+}
+
+// Cybersecurity Effects
+function createCyberEffects() {
+    // Add terminal typing effect
+    const terminalElements = document.querySelectorAll('.terminal-text');
+    terminalElements.forEach(terminal => {
+        const originalHTML = terminal.innerHTML;
+        terminal.innerHTML = '';
+        let i = 0;
+        function typeTerminal() {
+            if (i < originalHTML.length) {
+                terminal.innerHTML = originalHTML.slice(0, i + 1);
+                i++;
+                setTimeout(typeTerminal, 15);
+            }
+        }
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    typeTerminal();
+                    observer.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
-
-        // Observe all fade-in elements
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.fade-in').forEach(el => {
-                observer.observe(el);
-            });
-
-            // Animate skill bars when they come into view
-            const skillObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const skillBars = entry.target.querySelectorAll('.skill-progress');
-                        skillBars.forEach(bar => {
-                            const width = bar.style.width;
-                            bar.style.width = '0%';
-                            setTimeout(() => {
-                                bar.style.width = width;
-                            }, 200);
-                        });
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.skill-category').forEach(el => {
-                skillObserver.observe(el);
-            });
-
-            // Hide loading screen
-            setTimeout(() => {
-                document.getElementById('loading').classList.add('hidden');
-            }, 1500);
         });
+        observer.observe(terminal);
+    });
+}
 
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (window.scrollY > 100) {
-        header.style.background = 'var(--bg-primary)';
-        header.style.backdropFilter = 'blur(10px)';
+// Add cyber-themed floating elements
+function createFloatingElements() {
+    const floatingElements = ['🔒', '🛡️', '⚡', '🌐', '💻', '🎯', '📡', '🔍'];
+    const hero = document.querySelector('.hero');
+    
+    floatingElements.forEach((emoji, index) => {
+        const element = document.createElement('div');
+        element.textContent = emoji;
+        element.style.cssText = `
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.15;
+            pointer-events: none;
+            animation: floatRandom ${8 + index * 2}s infinite ease-in-out;
+            top: ${Math.random() * 80}%;
+            left: ${Math.random() * 90}%;
+            filter: drop-shadow(0 0 10px var(--primary-color));
+        `;
+        hero.appendChild(element);
+    });
+}
+
+// Add floating animation
+const floatingStyle = document.createElement('style');
+floatingStyle.textContent = `
+    @keyframes floatRandom {
+        0%, 100% { 
+            transform: translateY(0px) translateX(0px) rotate(0deg);
+        }
+        25% { 
+            transform: translateY(-20px) translateX(10px) rotate(5deg);
+        }
+        50% { 
+            transform: translateY(-10px) translateX(-10px) rotate(-5deg);
+        }
+        75% { 
+            transform: translateY(-30px) translateX(5px) rotate(3deg);
+        }
+    }
+`;
+document.head.appendChild(floatingStyle);
+
+// Add click effects with cyber theme
+document.addEventListener('click', (e) => {
+    const ripple = document.createElement('div');
+    ripple.style.cssText = `
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(0, 255, 136, 0.4), transparent);
+        transform: scale(0);
+        animation: cyberRipple 0.8s linear;
+        pointer-events: none;
+        left: ${e.clientX - 30}px;
+        top: ${e.clientY - 30}px;
+        width: 60px;
+        height: 60px;
+        z-index: 9999;
+        box-shadow: 0 0 20px var(--primary-color);
+    `;
+    document.body.appendChild(ripple);
+
+    setTimeout(() => {
+        ripple.remove();
+    }, 800);
+});
+
+// Add cyber ripple animation
+const cyberRippleStyle = document.createElement('style');
+cyberRippleStyle.textContent = `
+    @keyframes cyberRipple {
+        0% {
+            transform: scale(0);
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+        }
+        100% {
+            transform: scale(6);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(cyberRippleStyle);
+
+// Add pulsing effect to contact card
+setInterval(() => {
+    const profilePhoto = document.querySelector('.profile-photo');
+    if (profilePhoto) {
+        profilePhoto.style.boxShadow = '0 0 30px rgba(0, 255, 136, 0.8)';
+        setTimeout(() => {
+            profilePhoto.style.boxShadow = '0 0 20px rgba(0, 255, 136, 0.3)';
+        }, 500);
+    }
+}, 3000);
+
+// Dynamic greeting based on time
+function updateGreeting() {
+    const hour = new Date().getHours();
+    const heroTitle = document.querySelector('.hero h1');
+    let greeting = '';
+    
+    if (hour < 12) greeting = '🌅 Good Morning! I\'m';
+    else if (hour < 18) greeting = '☀️ Good Afternoon! I\'m';
+    else greeting = '🌙 Good Evening! I\'m';
+    
+    setTimeout(() => {
+        if (heroTitle) {
+            heroTitle.innerHTML = `${greeting} Mohamed Nasr`;
+        }
+    }, 3000);
+}
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Intersection Observer for fade-in animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+// Back to top button functionality
+const backToTopButton = document.getElementById('backToTop');
+
+function toggleBackToTop() {
+    if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
     } else {
-        header.style.background = 'var(--bg-primary)';
-        header.style.backdropFilter = 'none';
+        backToTopButton.classList.remove('visible');
+    }
+}
+
+if (backToTopButton) {
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Add scroll progress indicator
+const progressBar = document.createElement('div');
+progressBar.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--gradient);
+    z-index: 9999;
+    transition: width 0.1s ease;
+`;
+document.body.appendChild(progressBar);
+
+// Scroll events
+window.addEventListener('scroll', () => {
+    toggleBackToTop();
+    
+    const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    progressBar.style.width = scrollPercent + '%';
+    
+    // Parallax effect
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
 });
 
-        // Initialize theme as dark (cybersecurity aesthetic)
-        document.body.setAttribute('data-theme', 'dark');
+// Initialize everything when DOM loads
+document.addEventListener('DOMContentLoaded', () => {
+    // Set theme icons based on saved theme
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+    if (savedTheme === 'light') {
+        if (themeIcon) themeIcon.textContent = '☀️';
+        if (themeText) themeText.textContent = 'Light';
+    }
+    
+    // Initialize all animations and effects
+    createParticles();
+    createMatrixRain();
+    createCyberEffects();
+    createFloatingElements();
+    updateGreeting();
+    
+    // Observe all fade-in elements
+    document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+    });
 
-        // Particle animation for hero section
-        function createParticles() {
-            const hero = document.querySelector('.hero');
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.style.cssText = `
-                    position: absolute;
-                    width: 2px;
-                    height: 2px;
-                    background: rgba(255, 255, 255, 0.5);
-                    border-radius: 50%;
-                    top: ${Math.random() * 100}%;
-                    left: ${Math.random() * 100}%;
-                    animation: twinkle ${2 + Math.random() * 3}s infinite;
-                    pointer-events: none;
-                `;
-                hero.appendChild(particle);
-            }
-        }
-
-        // Add twinkling animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes twinkle {
-                0%, 100% { opacity: 0; transform: scale(0); }
-                50% { opacity: 1; transform: scale(1); }
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Initialize particles and cybersecurity effects
-        createParticles();
-        createMatrixRain();
-        createCyberEffects();
-
-        // Matrix Rain Effect
-        function createMatrixRain() {
-            const canvas = document.createElement('canvas');
-            canvas.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                pointer-events: none;
-                z-index: -1;
-                opacity: 0.1;
-            `;
-            document.body.appendChild(canvas);
-
-            const ctx = canvas.getContext('2d');
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-
-            const chars = '01';
-            const fontSize = 14;
-            const columns = canvas.width / fontSize;
-            const drops = Array(Math.floor(columns)).fill(1);
-
-            function drawMatrix() {
-                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-                ctx.fillStyle = '#00ff88';
-                ctx.font = fontSize + 'px monospace';
-
-                drops.forEach((y, i) => {
-                    const text = chars[Math.floor(Math.random() * chars.length)];
-                    ctx.fillText(text, i * fontSize, y * fontSize);
-
-                    if (y * fontSize > canvas.height && Math.random() > 0.975) {
-                        drops[i] = 0;
-                    }
-                    drops[i]++;
-                });
-            }
-
-            setInterval(drawMatrix, 50);
-
-            window.addEventListener('resize', () => {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-            });
-        }
-
-        // Cybersecurity Effects
-        function createCyberEffects() {
-            // Add scanning effect to project cards
-            document.querySelectorAll('.cybersecurity-project').forEach(card => {
-                card.addEventListener('mouseenter', () => {
-                    card.classList.add('scan-line');
-                });
-                card.addEventListener('mouseleave', () => {
+    // Animate skill bars when they come into view
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const skillBars = entry.target.querySelectorAll('.skill-progress');
+                skillBars.forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0%';
                     setTimeout(() => {
-                        card.classList.remove('scan-line');
-                    }, 3000);
+                        bar.style.width = width;
+                    }, 200);
                 });
-            });
+            }
+        });
+    }, observerOptions);
 
-            // Add terminal typing effect
-            const terminalElements = document.querySelectorAll('.terminal-text');
-            terminalElements.forEach(terminal => {
-                const originalHTML = terminal.innerHTML;
-                terminal.innerHTML = '';
-                let i = 0;
-                function typeTerminal() {
-                    if (i < originalHTML.length) {
-                        terminal.innerHTML = originalHTML.slice(0, i + 1);
-                        i++;
-                        setTimeout(typeTerminal, 15);
-                    }
-                }
-                
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            typeTerminal();
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                });
-                observer.observe(terminal);
-            });
+    document.querySelectorAll('.skill-category').forEach(el => {
+        skillObserver.observe(el);
+    });
+
+    // Hide loading screen
+    setTimeout(() => {
+        const loadingElement = document.getElementById('loading');
+        if (loadingElement) {
+            loadingElement.classList.add('hidden');
         }
-
-        // Enhanced counter animation with cyber effects
-        function animateCounters() {
-            const counters = [
-                { element: 'projects-count', target: 15, suffix: '+' },
-                { element: 'certifications-count', target: 10, suffix: '' },
-                { element: 'experience-count', target: 3, suffix: '+' }
-            ];
-
-            counters.forEach(counter => {
-                const element = document.getElementById(counter.element);
-                if (element) {
-                    let count = 0;
-                    const increment = counter.target / 60;
-                    const timer = setInterval(() => {
-                        count += increment;
-                        if (count >= counter.target) {
-                            count = counter.target;
-                            clearInterval(timer);
-                            element.classList.add('neon-glow');
-                        }
-                        element.textContent = Math.floor(count) + counter.suffix;
-                    }, 50);
-                }
-            });
+    }, 1500);
+    
+    // Start typing effects after a delay
+    setTimeout(() => {
+        initializeTypingEffects();
+    }, 2000);
+    
+    // Add twinkling animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
         }
+    `;
+    document.head.appendChild(style);
+});
 
-        // Add typing effect to hero subtitle
-        function typeWriter(element, text, speed = 50) {
-            let i = 0;
-            element.innerHTML = '';
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        // Initialize typing effect
-        setTimeout(() => {
-            const subtitle = document.querySelector('.hero-subtitle');
-            const originalText = subtitle.textContent;
-            typeWriter(subtitle, originalText, 30);
-        }, 2000);
-
-        // Add parallax effect
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-        });
-
-        // Dynamic greeting based on time
-        function updateGreeting() {
-            const hour = new Date().getHours();
-            const heroTitle = document.querySelector('.hero h1');
-            let greeting = '';
-            
-            if (hour < 12) greeting = '🌅 Good Morning! I\'m';
-            else if (hour < 18) greeting = '☀️ Good Afternoon! I\'m';
-            else greeting = '🌙 Good Evening! I\'m';
-            
-            setTimeout(() => {
-                heroTitle.innerHTML = `${greeting} Mohamed Nasr`;
-            }, 3000);
-        }
-
-        updateGreeting();
-
-        // Add scroll progress indicator
-        const progressBar = document.createElement('div');
-        progressBar.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 3px;
-            background: var(--gradient);
-            z-index: 9999;
-            transition: width 0.1s ease;
-        `;
-        document.body.appendChild(progressBar);
-
-        window.addEventListener('scroll', () => {
-            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            progressBar.style.width = scrollPercent + '%';
-        });
-
-        // Add click effects with cyber theme
-        document.addEventListener('click', (e) => {
-            const ripple = document.createElement('div');
-            ripple.style.cssText = `
-                position: absolute;
-                border-radius: 50%;
-                background: radial-gradient(circle, rgba(0, 255, 136, 0.4), transparent);
-                transform: scale(0);
-                animation: cyberRipple 0.8s linear;
-                pointer-events: none;
-                left: ${e.clientX - 30}px;
-                top: ${e.clientY - 30}px;
-                width: 60px;
-                height: 60px;
-                z-index: 9999;
-                box-shadow: 0 0 20px var(--primary-color);
-            `;
-            document.body.appendChild(ripple);
-
-            setTimeout(() => {
-                ripple.remove();
-            }, 800);
-        });
-
-        // Add cyber ripple animation
-        const cyberRippleStyle = document.createElement('style');
-        cyberRippleStyle.textContent = `
-            @keyframes cyberRipple {
-                0% {
-                    transform: scale(0);
-                    opacity: 1;
-                }
-                50% {
-                    opacity: 0.5;
-                }
-                100% {
-                    transform: scale(6);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(cyberRippleStyle);
-
-        // Add pulsing effect to contact card
-        setInterval(() => {
-            const profilePhoto = document.querySelector('.profile-photo');
-            if (profilePhoto) {
-                profilePhoto.style.boxShadow = '0 0 30px rgba(0, 255, 136, 0.8)';
-                setTimeout(() => {
-                    profilePhoto.style.boxShadow = '0 0 20px rgba(0, 255, 136, 0.3)';
-                }, 500);
-            }
-        }, 3000);
-
-        // Add progressive enhancement for certification items
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                document.querySelectorAll('.cert-item').forEach((item, index) => {
-                    setTimeout(() => {
-                        item.style.opacity = '0';
-                        item.style.transform = 'translateX(-50px)';
-                        item.style.transition = 'all 0.6s ease';
-                        
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'translateX(0)';
-                        }, 100);
-                    }, index * 200);
-                });
-            }, 1000);
-        });
-
-        // Add ripple animation
-        const rippleStyle = document.createElement('style');
-        rippleStyle.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(rippleStyle);
-
-        // Add cyber-themed floating elements
-        function createFloatingElements() {
-            const floatingElements = ['🔒', '🛡️', '⚡', '🌐', '💻', '🎯', '📡', '🔐'];
-            const hero = document.querySelector('.hero');
-            
-            floatingElements.forEach((emoji, index) => {
-                const element = document.createElement('div');
-                element.textContent = emoji;
-                element.style.cssText = `
-                    position: absolute;
-                    font-size: 2rem;
-                    opacity: 0.15;
-                    pointer-events: none;
-                    animation: floatRandom ${8 + index * 2}s infinite ease-in-out;
-                    top: ${Math.random() * 80}%;
-                    left: ${Math.random() * 90}%;
-                    filter: drop-shadow(0 0 10px var(--primary-color));
-                `;
-                hero.appendChild(element);
-            });
-        }
-
-        // Add floating animation
-        const floatingStyle = document.createElement('style');
-        floatingStyle.textContent = `
-            @keyframes floatRandom {
-                0%, 100% { 
-                    transform: translateY(0px) translateX(0px) rotate(0deg);
-                }
-                25% { 
-                    transform: translateY(-20px) translateX(10px) rotate(5deg);
-                }
-                50% { 
-                    transform: translateY(-10px) translateX(-10px) rotate(-5deg);
-                }
-                75% { 
-                    transform: translateY(-30px) translateX(5px) rotate(3deg);
-                }
-            }
-        `;
-        document.head.appendChild(floatingStyle);
-
-        createFloatingElements();
-		
-		        // Back to top button functionality
-        const backToTopButton = document.getElementById('backToTop');
-
-        function toggleBackToTop() {
-            if (window.scrollY > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        }
-
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Add scroll event listener
-        window.addEventListener('scroll', toggleBackToTop);
-
-     
-
-        // Insert certifications section before contact
-        const contactSection = document.getElementById('contact');
-        contactSection.insertAdjacentHTML('beforebegin', certificationsHTML);
-
-        // Add hover effects to cert badges
-        document.querySelectorAll('.cert-badge > div').forEach(badge => {
-            badge.addEventListener('mouseenter', () => {
-                badge.style.transform = 'translateY(-10px) scale(1.05)';
-            });
-            badge.addEventListener('mouseleave', () => {
-                badge.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Add scroll-triggered counter animation
-        function animateCounters() {
-            const counters = [
-                { element: 'projects-count', target: 10, suffix: '+' },
-                { element: 'certifications-count', target: 8, suffix: '' },
-                { element: 'experience-count', target: 3, suffix: '+' }
-            ];
-
-            counters.forEach(counter => {
-                const element = document.getElementById(counter.element);
-                if (element) {
-                    let count = 0;
-                    const increment = counter.target / 50;
-                    const timer = setInterval(() => {
-                        count += increment;
-                        if (count >= counter.target) {
-                            count = counter.target;
-                            clearInterval(timer);
-                        }
-                        element.textContent = Math.floor(count) + counter.suffix;
-                    }, 30);
-                }
-            });
-        }
-
-        // Add stats section
-        const statsHTML = `
-            <section style="background: var(--gradient); color: white; padding: 60px 0;">
-                <div class="container">
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
-                        <div>
-                            <div style="font-size: 3rem; font-weight: bold;" id="projects-count">0+</div>
-                            <div style="font-size: 1.1rem; opacity: 0.9;">Projects Completed</div>
-                        </div>
-                        <div>
-                            <div style="font-size: 3rem; font-weight: bold;" id="certifications-count">0</div>
-                            <div style="font-size: 1.1rem; opacity: 0.9;">Certifications & Training</div>
-                        </div>
-                        <div>
-                            <div style="font-size: 3rem; font-weight: bold;" id="experience-count">0+</div>
-                            <div style="font-size: 1.1rem; opacity: 0.9;">Years of Learning</div>
-                        </div>
-                        <div>
-                            <div style="font-size: 3rem; font-weight: bold;">100%</div>
-                            <div style="font-size: 1.1rem; opacity: 0.9;">Dedication</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        `;
-
-        // Insert stats section after skills
-        const skillsSection = document.getElementById('skills');
-        skillsSection.insertAdjacentHTML('afterend', statsHTML);
-		        // Back to top button
-        function toggleBackToTop() {
-            const backToTop = document.getElementById('backToTop');
-            if (window.scrollY > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        }
-
-        document.getElementById('backToTop').addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Trigger counter animation when stats section is visible
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        setTimeout(() => {
-            const statsSection = document.querySelector('section[style*="background: var(--gradient)"]');
-            if (statsSection) {
-                statsObserver.observe(statsSection);
-            }
-        }, 100);
-		
-		        // Back to top button
-        function toggleBackToTop() {
-            const backToTop = document.getElementById('backToTop');
-            if (window.scrollY > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        }
-
-        document.getElementById('backToTop').addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Add back to top button
-        const backToTop = document.createElement('button');
-        backToTop.innerHTML = '↑';
-        backToTop.style.cssText = `
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--gradient);
-            color: white;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            opacity: 0;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        `;
-        document.body.appendChild(backToTop);
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.style.opacity = '1';
-            } else {
-                backToTop.style.opacity = '0';
-            }
-        });
-    </script>
-</body>
-	
+// Add hover effects to cert badges
+document.querySelectorAll('.cert-badge > div').forEach(badge => {
+    badge.addEventListener('mouseenter', () => {
+        badge.style.transform = 'translateY(-10px) scale(1.05)';
+    });
+    badge.addEventListener('mouseleave', () => {
+        badge.style.transform = 'translateY(0) scale(1)';
+    });
+});
+</script>
