@@ -12,7 +12,7 @@
         /* ===== CSS VARIABLES ===== */
         :root {
             /* Light Theme Variables */
-            --primary-color: #3b82f6;
+            --primary-color: #60a5fa;
             --secondary-color: #2563eb;
             --accent-color: #06b6d4;
             --cyber-blue: #0ea5e9;
@@ -33,7 +33,7 @@
         [data-theme="dark"] {
             /* Dark Theme Variables */
             --primary-color: #60a5fa;
-            --secondary-color: #3b82f6;
+            --secondary-color: #2563eb;
             --accent-color: #06b6d4;
             --cyber-blue: #0ea5e9;
             --cyber-purple: #8b5cf6;
@@ -160,7 +160,7 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.5rem;
             font-weight: 700;
-            background: linear-gradient( #60a5fa, #06b6d4);
+            background: linear-gradient(#60a5fa);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -285,7 +285,7 @@
             position: relative;
             overflow: hidden;
             min-height: 100vh;   /* fallback */
-  min-height: 100dvh;  /* dynamic viewport for most modern browsers */
+            min-height: 100dvh;  /* dynamic viewport for most modern browsers */
             display: flex;
             align-items: center;
 			
@@ -320,7 +320,7 @@
             font-weight: 700;
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease-out;
-            background: linear-gradient( #60a5fa, #06b6d4);
+            background: linear-gradient(#60a5fa);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -405,7 +405,7 @@
         /* ===== ABOUT SECTION ===== */
         .about {
             background: var(--bg-secondary);
-            padding: 100px 0;
+            padding: 40px 0;
             position: relative;
             z-index: 1;
         }
@@ -420,7 +420,7 @@
         .contact-card {
             background: var(--bg-card);
             border-radius: 20px;
-            padding: 3rem;
+            padding: 2rem;
             text-align: center;
             box-shadow: var(--shadow-lg);
             border: 1px solid var(--border-color);
@@ -462,7 +462,7 @@
         .contact-card h3 {
             font-size: 1.8rem;
             margin-bottom: 0.5rem;
-            background: var(--gradient);
+            background: var(--primary-color);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
