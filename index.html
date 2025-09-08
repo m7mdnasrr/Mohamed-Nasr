@@ -1199,6 +1199,39 @@
                 padding: 1.5rem;
             }
         }
+		
+		:root {
+  --header-h: 70px; /* adjust if your header is taller/shorter */
+}
+
+/* Base: make hero fullscreen on modern browsers */
+.hero {
+  min-height: 100vh;   /* fallback */
+  min-height: 100dvh;  /* dynamic viewport for most modern browsers */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding-top: calc(var(--header-h) + 20px); /* keep content clear of fixed header */
+}
+
+/* Prefer the “small viewport” on mobile to avoid URL-bar jumps */
+@supports (height: 100svh) {
+  .hero { min-height: 100svh; }
+}
+
+/* Mobile override: keep fullscreen AND account for fixed header */
+@media (max-width: 768px) {
+  .hero {
+    /* REMOVE any earlier 'min-height: auto' block */
+    min-height: calc(100svh - var(--header-h));
+    /* If svh unsupported, dvh still applies from above */
+    padding-top: calc(var(--header-h) + 16px);
+  }
+}
+
+
     </style>
 </head>
 <body>
